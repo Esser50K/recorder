@@ -83,7 +83,7 @@ If those don't work for you, you can build from source.
 We create packages for releases for a few distributions. Please note:
 
 - that these packages might depend on libmosquitto1 from the [Mosquitto project](http://mosquitto.org/downloads). In particular, for Debian Stretch (9) this is not the case.
-- we typically do not build packages for distributions which have been superceded upstream
+- we typically do not build packages for distributions which have been superseded upstream
 
 Binaries (`ocat`, `ot-recorder`) from these packages run setuid to user `owntracks` so that they work for all users of the system. Note that, say, certificate files you provide must therefore also be readable by the user `owntracks`.
 
@@ -979,3 +979,4 @@ It actually is possible to gateway location publishes arriving via HTTP into MQT
 If a payload is received with an element called `_geoprec` it contains an override for the Recorder's configured reverse-geo precision. So, for example, if Recorder is running with precision 7, say, and the received payload contains `"_geoprec" : 2` the 2 will be used for this particular publish. This is not used in the OwnTracks apps, but it can be used with payloads you generate otherwise. If `_geoprec` is negative, new reverse geo lookups will not be performed, but cached entries of `abs(_geoprec)` will be used.
 
   [revgeod]: https://github.com/jpmens/revgeod
+
